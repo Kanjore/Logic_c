@@ -100,3 +100,18 @@ def CONTADOR(inicio, fin, paso, ascendente=True):
         return list(range(inicio, fin + 1, paso))
     else:
         return list(range(fin, inicio - 1, - paso))
+
+def BUFFER(input_signal, clock, state):
+    if clock:
+        state = input_signal
+    return state
+   
+ 
+import signal
+def TEMPORIZADOR(segundos):
+    def manejador_senal(signum, frame):
+        exit()
+    signal.signal(signal.SIGALRM, manejador_senal)
+    signal.alarm(segundos)
+    while True:
+        pass
