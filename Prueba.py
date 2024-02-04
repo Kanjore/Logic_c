@@ -12,4 +12,8 @@ print(Mult)
 
 Flipflop = log_d.FLIPFLOP(0, 1)
 print(Flipflop)
+buffer_state = 0
+Salida = log_d.BUFFER(0, 1, buffer_state)
+print(Salida)
+log_d.TEMPORIZADOR(5)
 
